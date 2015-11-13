@@ -1,0 +1,25 @@
+{
+  "name": "3dlh",
+  "version": "0.",
+  "homepage": "https://github.com/Servuc/3dlh",
+  "description": "Visite du Havre en 3D",
+  "main": "index.php",
+  "moduleType": [],
+  "keywords": [
+    "viste",
+    "havre",
+    "3d",
+    "webgl"
+  ],
+  "license": "GNU GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

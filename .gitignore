@@ -1,0 +1,16 @@
+composer.phar
+3dlh/webroot/bower_components/
+
+# CakePHP 3
+
+/3dlh/vendor/*
+/3dlh/config/app.php
+/3dlh/tmp/*
+/3dlh/logs/*
+
+# CakePHP 2
+
+/3dlh/app/tmp/*
+/3dlh/app/Config/core.php
+/3dlh/app/Config/database.php
+/3dlh/vendors/*

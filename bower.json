@@ -1,0 +1,17 @@
+{
+  "name": "3dlh",
+  "homepage": "https://github.com/Servuc/3dlh",
+  "description": "visite du havre en 3D",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "visit",
+    "le",
+    "havre",
+    "3d"
+  ],
+  "license": "GNU GPL",
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

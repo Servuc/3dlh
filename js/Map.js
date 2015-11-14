@@ -90,6 +90,11 @@ var Map = (function() {
     return null;
   };
 
+  Map.prototype.setPosition = function(x, y)
+  {
+    this.modernMap.setPosition(x, y);
+  };
+
   // handle states!
   Map.prototype.set3D = function(flag) {
     if (flag && !this.has3D) {

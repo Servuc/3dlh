@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
 
 	background-color: #1abc9c;
 }
@@ -21,4 +22,7 @@ border-color: #3498db;
 a#navbar-title{
 
 	color: black;
+
+	overflow: hidden;
+
 }

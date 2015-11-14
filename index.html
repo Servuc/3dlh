@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+
+
+<title>OSM Buildings</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="title" content="OSM Buildings">
+<meta property="description" content="OSM Buildings - A JavaScript library for visualizing building geometry on interactive maps">
+<meta property="keywords" content="OSM Building, OSM Buildings, OSMBuilding, OSMBuildings, OSM-Building, OSM-Buildings, 3D Buildings, 3D Building, Extruded Building, Extruded Buildings, Elevated Building, Elevated Buildings, OSM-3D, 3D, Building, Buildings, Leaflet, LeafletJS, Leaflet.js, OpenLayers, Jan Marsch, Berlin, Map, Maps, MapBox, Perspective, Polygon, Polygons, Anaglyph, OSM, OpenStreetMap, OpenStreetMaps, JS, JavaScript, Library, WebGL, Example, Examples, Indoor, fly.js, FlyJS, Layer, BuildingLayer, BuildingsLayer, Footprint, Coordinates, Geometry, JSON, GeoJSON, Height, Extract, node, nodeJS, node.js, PostGIS, Geo, GPS, GIS, Visualization, Latitude, Longitude, Mercator, Projection, Panning, Zooming, API">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="http://osmbuildings.org/favicon.png">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
     <title>Visite du Havre 3DOSM Buildings</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +28,11 @@
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
 
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="styles.css">
+
     <script src="js/leaflet.js"></script>
     <script src="js/OSMBuildings-Leaflet.js"></script>
     <script>
@@ -40,56 +60,99 @@
     <script src="js/index.js"></script>
 </head>
 
-<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"> 3DLH  </a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <!--<li class="active"><a href="#">Home</a></li> -->
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand " id="navbar-title" href="#"> 3DLH  </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav " >
+            <!--<li class="active"><a href="#">Home</a></li> -->
+            <li>
+
+            <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Architecture <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Maison de l'Armateur</a></li>
+                <li><a href="#">Site Oscar Niemeyer</a></li>
+                <li><a href="#">Centre classée</a></li>
+                <li><a href="#">Hôtel de Ville</a></li>
+                <li><a href="#">Porte Océane</a></li>
+                              
+              </ul>
+              </li>
+            <!--<li><a href="#contact">Contact</a></li>-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">complexes sportifs<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Bassin des docks</a></li>
+                <li><a href="#">Stade Océane</a></li>
+               
+              </ul>
+            </li>
+
           <li>
 
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures1 <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-            </li>
-          <!--<li><a href="#contact">Contact</a></li>-->
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures2<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
+            <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Espaces naturels <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Plage</a></li>
+                <li><a href="#">Jardins suspendus</a></li>
+                <li><a href="#">Forêt de Montgeon</a></li>
+              </ul>
+        </li>
 
+        <li>
+
+          <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Monuments<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Cathédrale</a></li>
+              <li><a href="#">Eglise Saint Joseph</a></li>
+              <li><a href="#">Abbaye de Graville</a></li>
+            </ul>
+        </li>
+
+        <li>
+
+          <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Musées <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">MUMA</a></li>
+              <li><a href="#">Muséum d'Histoire naturelle</a></li>
+              <li><a href="#">Musée Dubocage de Bléville</a></li>
+            </ul>
+        </li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+</div>
+
+   </head>
+
+
+<body>
+
+
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  
+
+
+</body>
+</html>
+<!-- 
 
     <div id="map-classic" class="map hidden"></div>
     <div id="map-modern" class="map glmap-container"><div class="glmap-attribution">© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com/">MapBox</a> · © 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a></div><canvas height="628" width="1366" style="position: absolute;"></canvas></div>
 
 </body>
 </html>
+>>>>>>> aa21f45bf116c8a1d41212bdf004308489b8a6db
+ -->

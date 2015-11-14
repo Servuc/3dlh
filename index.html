@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>OSM Buildings</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta property="title" content="OSM Buildings">
-<meta property="description" content="OSM Buildings - A JavaScript library for visualizing building geometry on interactive maps">
-<meta property="keywords" content="OSM Building, OSM Buildings, OSMBuilding, OSMBuildings, OSM-Building, OSM-Buildings, 3D Buildings, 3D Building, Extruded Building, Extruded Buildings, Elevated Building, Elevated Buildings, OSM-3D, 3D, Building, Buildings, Leaflet, LeafletJS, Leaflet.js, OpenLayers, Jan Marsch, Berlin, Map, Maps, MapBox, Perspective, Polygon, Polygons, Anaglyph, OSM, OpenStreetMap, OpenStreetMaps, JS, JavaScript, Library, WebGL, Example, Examples, Indoor, fly.js, FlyJS, Layer, BuildingLayer, BuildingsLayer, Footprint, Coordinates, Geometry, JSON, GeoJSON, Height, Extract, node, nodeJS, node.js, PostGIS, Geo, GPS, GIS, Visualization, Latitude, Longitude, Mercator, Projection, Panning, Zooming, API">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="icon" type="image/png" href="http://osmbuildings.org/favicon.png">
-<link rel="stylesheet" href="css/leaflet.css">
-<link rel="stylesheet" href="css/style.css">
+    <title>Visite du Havre 3DOSM Buildings</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="title" content="Visite du Havre 3D">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="http://osmbuildings.org/favicon.png">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="styles.css">
-<script src="js/leaflet.js"></script>
-<script src="js/OSMBuildings-Leaflet.js"></script>
-<script>
-function clone(dst, src) {
-  for (var p in src) {
-    if (src.hasOwnProperty(p)) {
-      dst[p] = src[p];
-    }
-  }
-}
+    <script src="js/leaflet.js"></script>
+    <script src="js/OSMBuildings-Leaflet.js"></script>
+    <script>
+        function clone(dst, src) {
+            for (var p in src) if (src.hasOwnProperty(p)) dst[p] = src[p]
+        }
 
-// conflict prevention
-var parent = OSMBuildings;
-var OSMBuildingsClassic = function() {
-  parent.apply(this, arguments);
-};
-clone(OSMBuildingsClassic, OSMBuildings);
+        // conflict prevention
+        var parent = OSMBuildings;
+        var OSMBuildingsClassic = function() {
+            parent.apply(this, arguments);
+        };
+        clone(OSMBuildingsClassic, OSMBuildings);
 
-OSMBuildingsClassic.prototype = {};
-clone(OSMBuildingsClassic.prototype, OSMBuildings.prototype);
+        OSMBuildingsClassic.prototype = {};
+        clone(OSMBuildingsClassic.prototype, OSMBuildings.prototype);
 
-OSMBuildingsClassic.prototype.constructor = OSMBuildings;
-</script>
-<script src="js/GLMap.js"></script>
-<script src="js/OSMBuildings-GLMap.js"></script>
-<script src="js/Events.js"></script>
-<script src="js/MapModern.js"></script>
-<script src="js/Map.js"></script>
-<script src="js/index.js"></script>
+        OSMBuildingsClassic.prototype.constructor = OSMBuildings;
+    </script>
+    <script src="js/GLMap.js"></script>
+    <script src="js/OSMBuildings-GLMap.js"></script>
+    <script src="js/Events.js"></script>
+    <script src="js/MapModern.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -94,7 +88,8 @@ OSMBuildingsClassic.prototype.constructor = OSMBuildings;
   </nav>
 
 
-<div id="map-classic" class="map hidden"></div>
-<div id="map-modern" class="map glmap-container"><div class="glmap-attribution">© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com/">MapBox</a> · © 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a></div><canvas height="628" width="1366" style="position: absolute;"></canvas></div>
+    <div id="map-classic" class="map hidden"></div>
+    <div id="map-modern" class="map glmap-container"><div class="glmap-attribution">© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com/">MapBox</a> · © 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a></div><canvas height="628" width="1366" style="position: absolute;"></canvas></div>
 
-</body></html>
+</body>
+</html>

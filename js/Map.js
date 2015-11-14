@@ -55,9 +55,9 @@ var Map = (function() {
     this.set3D(this.has3D);
   };
 
-  Map.DEFAULT_LAT = 52.52111;
-  Map.DEFAULT_LON = 13.40988;
-  Map.DEFAULT_ZOOM = 16;
+  Map.DEFAULT_LAT = 49.493559;
+  Map.DEFAULT_LON = 0.1055623;
+  Map.DEFAULT_ZOOM = 8;
   Map.MAX_ZOOM = 18;
   Map.MAX_EXTRA_ZOOM = Map.MAX_ZOOM+2;
   Map.TILE_SOURCE = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png';
@@ -86,15 +86,8 @@ var Map = (function() {
   };
 
   Map.prototype.createClassicMap = function(container) {
-    var map = new MapClassic(container);
-    map.engine.on('click', function() {
-      this.emit('interaction');
-    }.bind(this));
-    map.engine.on('moveend zoomend', function() {
-      saveStateToURL(map.getState());
-    });
-    map.setState(loadStateFromURL());
-    return map;
+
+    return null;
   };
 
   // handle states!

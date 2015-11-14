@@ -1,69 +1,100 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<title>OSM Buildings</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="title" content="OSM Buildings">
+<meta property="description" content="OSM Buildings - A JavaScript library for visualizing building geometry on interactive maps">
+<meta property="keywords" content="OSM Building, OSM Buildings, OSMBuilding, OSMBuildings, OSM-Building, OSM-Buildings, 3D Buildings, 3D Building, Extruded Building, Extruded Buildings, Elevated Building, Elevated Buildings, OSM-3D, 3D, Building, Buildings, Leaflet, LeafletJS, Leaflet.js, OpenLayers, Jan Marsch, Berlin, Map, Maps, MapBox, Perspective, Polygon, Polygons, Anaglyph, OSM, OpenStreetMap, OpenStreetMaps, JS, JavaScript, Library, WebGL, Example, Examples, Indoor, fly.js, FlyJS, Layer, BuildingLayer, BuildingsLayer, Footprint, Coordinates, Geometry, JSON, GeoJSON, Height, Extract, node, nodeJS, node.js, PostGIS, Geo, GPS, GIS, Visualization, Latitude, Longitude, Mercator, Projection, Panning, Zooming, API">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/png" href="http://osmbuildings.org/favicon.png">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
-<!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+<script src="js/leaflet.js"></script>
+<script src="js/OSMBuildings-Leaflet.js"></script>
+<script>
+function clone(dst, src) {
+  for (var p in src) {
+    if (src.hasOwnProperty(p)) {
+      dst[p] = src[p];
+    }
+  }
+}
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"> 3DLH  </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <!--<li class="active"><a href="#">Home</a></li> -->
-            <li>
+// conflict prevention
+var parent = OSMBuildings;
+var OSMBuildingsClassic = function() {
+  parent.apply(this, arguments);
+};
+clone(OSMBuildingsClassic, OSMBuildings);
 
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures1 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-              </li>
-            <!--<li><a href="#contact">Contact</a></li>-->  
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures2<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+OSMBuildingsClassic.prototype = {};
+clone(OSMBuildingsClassic.prototype, OSMBuildings.prototype);
+
+OSMBuildingsClassic.prototype.constructor = OSMBuildings;
+</script>
+<script src="js/GLMap.js"></script>
+<script src="js/OSMBuildings-GLMap.js"></script>
+<script src="js/Events.js"></script>
+<script src="js/MapModern.js"></script>
+<script src="js/Map.js"></script>
+<script src="js/index.js"></script>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> 3DLH  </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <!--<li class="active"><a href="#">Home</a></li> -->
+          <li>
 
-<div class="row">
-  
-<div class="col-md-12 col-md-offset-2">table</div>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures1 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+            </li>
+          <!--<li><a href="#contact">Contact</a></li>-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures2<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
 
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-</body>
-</html>
+<div id="map-classic" class="map hidden"></div>
+<div id="map-modern" class="map glmap-container"><div class="glmap-attribution">© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com/">MapBox</a> · © 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a></div><canvas height="628" width="1366" style="position: absolute;"></canvas></div>
+
+</body></html>

@@ -23,7 +23,7 @@ var MapModern = (function() {
     this.osmb.addMapTiles('http://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png');
     this.osmb.addGeoJSONTiles('http://{s}.data.qa.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json', { fixedZoom: 15 });
 
-    this.osmb.addOBJ("file:///home/thomas/Documents/GIT/3dlh/objects/hotel_ville.obj", {latitude:49.494244, longitude:0.1072428})
+    this.osmb.addOBJ("file:///home/thomas/Documents/GIT/3dlh/objects/bain_docks.obj", {latitude:49.5, longitude:0.1072428})
 
     this.engine.on('pointermove', this._onPointerMove = function(e) {
       var id = this.osmb.getTarget(e.x, e.y);

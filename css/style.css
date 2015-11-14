@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+img {
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* just for IE and for OpenLayers */
+}
+
+.logo {
+  width: 50px;
+  height: 44px;
+  margin: 15px 0 0 15px;
+  opacity: 1.0;
+  float: left;
+}
+
+.search-box {
+  margin: 19px 0 0 15px;
+  box-shadow: 0 0 10px #999999;
+  display: inline-block;
+}
+
+#search {
+    -webkit-appearance: none;
+    width: 250px;
+    height: 37px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    outline: 0;
+    margin: 0;
+}
+
+#search:focus {
+  background: rgba(255, 255, 255, 1.0);
+}
+
+#search.error {
+  background: rgba(250, 150, 100, 1.0);
+  border: 2px solid rgba(250, 150, 100, 1.0);
+}
+
+#menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1000; /* just for IE and for OpenLayers */
+  display: inline-block;
+}
+
+#menu.hidden {
+  display: none;
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 70px 0 0 -5px;
+  padding: 0;
+}
+
+#menu li {
+  border-bottom: 1px solid #999999;
+}
+
+#menu li:last-child {
+  border: 0;
+}
+
+#menu a:link, #menu a:visited {
+  color: #000000;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+#menu-toggle {
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+  display: inline-block;
+  background: url(assets/options.png) rgba(192,192,192,0.8) center center no-repeat;
+  float: right;
+}
+
+#menu-toggle.active {
+  background: url(assets/close.png) rgba(192,192,192,0.8) center center no-repeat;
+}
+
+@media screen and (max-width: 640px) {
+  .leaflet-container .leaflet-control-attribution {
+    display: none;
+  }
+
+  #search {
+    width: 195px;
+  }
+
+  .logo {
+    width: 38px;
+    height: 33px;
+    margin: 20px 0 0 15px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #menu {
+    width: 390px;
+    height: auto;
+    box-shadow: 0 0 10px #666666;
+  }
+}
+
+.leaflet-left .leaflet-control {
+  margin-left: 20px;
+}
+
+.leaflet-top {
+  margin-top: 80px;
+}

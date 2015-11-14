@@ -12,6 +12,7 @@
   ],
   "license": "GNU GPL",
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "OSMBuildings": "https://github.com/OSMBuildings/OSMBuildings.git#~2.0.0"
   }
 }

@@ -2,3 +2,23 @@ body{
 
 	background-color: #1abc9c;
 }
+
+
+#navbar{
+
+background-color: #3498db;
+background-image: none;
+border-color: #3498db;
+
+}
+
+.nav > li > a.Nature-color{
+
+
+	color: black;
+}
+
+a#navbar-title{
+
+	color: black;
+}

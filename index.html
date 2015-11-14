@@ -1,15 +1,18 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
 
 <!-- Latest compiled and minified JavaScript -->
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified JavaScript -->
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,14 +21,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"> 3DLH  </a>
+          <a class="navbar-brand " id="navbar-title" href="#"> 3DLH  </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav " >
             <!--<li class="active"><a href="#">Home</a></li> -->
             <li>
 
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures1 <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures1 <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -36,9 +39,9 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
               </li>
-            <!--<li><a href="#contact">Contact</a></li>-->  
+            <!--<li><a href="#contact">Contact</a></li>-->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures2<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle Nature-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Natures2<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -53,20 +56,45 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-</head>
 
-<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">table</div>
+
+        </div>
+    </div>
 
 
-<div class="row">
-  
-<div class="col-md-12 col-md-offset-2">table</div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="map.js" ></script>
 
-</div>
+    <script type="text/javascript" src="Three.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-<script type="text/javascript" src="three.js/build/three.js"></script>
-<script type="text/javascript" src="three.js/build/three.min.js"></script>
+    ...
+
+    <script type="text/javascript">
+        ...
+
+        // load ascii model
+
+        //var jsonLoader = new THREE.JSONLoader();
+       // jsonLoader.load( "map.js", createScene );
+
+        // load binary model
+
+        var binLoader = new THREE.BinaryLoader();
+        binLoader.load( "map.js", createScene );
+
+        function createScene( geometry, materials ) {
+
+            var mesh = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial( materials ) );
+
+        }
+
+        ...
+    </script>
 </body>
 </html>
